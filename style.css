@@ -1,0 +1,181 @@
+/*variavéis*/
+:root{
+    --primary: #00f0ff;
+    --secondary: #ccc;
+    --text-color: #fff;
+}
+
+*{
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Menu*/
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.logo img {
+    height: 70px;
+}
+  
+.menu {
+    display: flex;
+}
+  
+  .menu a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+    position: relative;
+  }
+  
+  .menu a.active::before,
+  .menu a:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(135, 200, 120, 1);
+    mix-blend-mode: multiply;
+  }
+  
+  
+.banner {
+    background: url("./assets/img/eemti.png") no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.banner > h1{
+    text-align: center;
+}
+
+/*Main*/
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 4em;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.img-principal{
+    width: 250px;
+    height: 250px;
+    border-radius: 40%;
+    margin-bottom: 2em;
+}
+.content-principal{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 20%;
+}
+/*Section*/
+section{
+    width: 100%;/*largura*/
+    margin:0 auto;
+}
+
+.content-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-details img{
+    width: 50%;
+    height: 50vh;/*no tamanho da tela*/
+}
+.content-details div{
+    text-align: center;
+    padding: 50px;
+}
+.content-details h2{
+    margin-bottom: 30px;
+}
+
+.content-two{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.content-two img{
+    width: 50%;
+    height: 100vh;
+}
+
+.content-two div{
+    text-align: center;
+    padding: 50px;
+}
+.content-two h2{
+    margin-bottom: 30px;
+}
+
+/*Section vídeo*/
+#video{
+    height: 500px;
+    background:  rgba(135, 200, 120, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid orange;
+}
+/*rodapé*/
+footer > p{
+    padding: 1em;
+    text-align: center;
+}
+
+/*Mobile 576px, tablet 756px*/
+@media (max-width: 800px) {
+    main{
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .content-principal{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        max-width: 80%;
+    }
+    /**/
+    .content-details{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .content-details img{
+        width: 100%;
+        height: 100vh;
+    }
+    .content-two{
+        display: flex;
+        flex-direction: column-reverse;
+        width: auto;
+    }
+    .content-two img{
+        width: 100%;
+        height: 100vh;
+    }
+}
